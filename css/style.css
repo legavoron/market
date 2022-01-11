@@ -1,0 +1,136 @@
+a{
+  text-decoration: none;
+}
+
+ul,
+ol,
+li{
+  list-style: none;
+}
+img{
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body{
+  height: 100%;
+  line-height: 1;
+  font-size: 14px;
+  font-weight: 500;
+  color: #252B42;
+  font-family: 'Montserrat';
+}
+/* Reset standard settings */
+
+/* >---------------------------------------------------------------------------------------------------------------------- */
+.wrapper{
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /*Указываем, как блоки будут располагаться в flex контейнере. column- значит вертикально сверху вниз*/
+}
+
+._container{
+  max-width: 1046px;
+  margin: 0px auto;
+  padding: 0px 15px; /* Делаем отступы, чтобы при адаптиве блоки не прилипали к краям, а имели отступ иначе некрасиво*/
+  box-sizing: content-box; /* Это чтобы к размеру блока не прибавлялся паддинг, а размер учитывался вместе с ним*/
+}
+/* --------------------------------------------Header-------------------------------------------------------- */
+.header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 50;
+}
+.header_container {
+  display: flex;
+  min-height: 104px;
+  align-items: center;
+}
+@media (max-width: 479px) {
+  .header_container {
+    min-height: 70px; /*При уменьшении экрана до мобильного делаем высоту шапки поменьше*/
+  }
+}
+.header_logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: inherit;
+}
+.header_menu {
+  margin: 0px 0px 0px 133px;
+}
+
+@media (max-width: 992px) {
+  .header_menu {
+    margin: 0px 0px 0px 80px; /*При уменьшении экрана до планшетного отступ от логотипа до меню делаем меньше*/
+  }
+}
+@media (max-width: 767px) {
+  .header_menu {
+    margin: 0px 0px 0px 40px; /*При уменьшении экрана до мобильного отступ от логотипа до меню делаем меньше*/
+  }
+}
+@media (max-width: 479px) {
+  .header_menu {
+    margin: 0px 0px 0px 20px; /*При уменьшении экрана до мобильного отступ от логотипа до меню делаем меньше*/
+  }
+}
+.menu_list {
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap; /*Это перенос на новую строку при уменьшении экрана*/
+}
+.menu{
+  padding-top: 5px 0; /* Отступ сверху и снизу при адаптиве ,чтобы не прилипли пункты к шапке*/
+}
+.menu_item:not(:last-child) {
+  margin: 0px 21px 0px 0px; /* Добавляем отступы для всеъ элементов кроме последнего */
+}
+.menu_link {
+  color: #737373;
+  font-weight: 600;
+  line-height: 171%; 
+}
+@media (max-width: 479px) {
+  .menu_link {
+    font-size: 18px; /*При уменьшении экрана до мобильного увеличиваем шрифт пунктов*/
+  }
+}
+
+/* -------------------------------------------------Main--------------------------------------------------------------------- */
+.page{
+  flex: 1 1 auto; /*Задаем сразу, чтобы футер был всегда снизу*/
+}
+.page_main_block {
+}
+.main_block {
+}
+.main_block_title {
+}
+.main_block_text {
+}
+.main_block_buttons {
+}
+
+
+
+
+
+
+/* ------------------------------------------------Footer----------------------------------------------------------------------*/
+.footer{
+
+}
