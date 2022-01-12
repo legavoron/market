@@ -129,8 +129,7 @@ body{
 .page{
   flex: 1 1 auto; /*Задаем сразу, чтобы футер был всегда снизу*/
 }
-  .page_main_block {
-  }
+ 
   /* --------------------------------------------------Main Block-------------------------------------------------------------- */
   .main_block {
     position: relative;
@@ -139,20 +138,68 @@ body{
     padding: 184px 0px 191px 0px;
     position:relative;
     z-index: 2; 
-    max-width: 509px;
+    max-width: 400px;
   }
+  .main_block_body > *:not(:last-child){ /* Обращаемся ко всем объектам body 1-го уровня, кроме последнего*/
+    margin: 0px 0px 35px 0px;
+  }
+  @media (max-width: 992px){
+    .main_block_body{
+      padding: 120px 0px 191px 0px;
+    }
+  }
+
   .main_block_title {
     font-size: 58px;
     line-height: 137%;
     font-weight: 800;
+    letter-spacing: 0.2px; /*дополнительное расстояние между буквами*/
+  }
+  @media (max-width: 479px){
+    .main_block_title{
+      font-size: 42px;
+    }
   }
   .main_block_text {
+    color: #737373;
+    font-size: 20px;
+    line-height: 150%;
   }
   .main_block_buttons {
+    display: flex; 
+    flex-wrap: wrap; /*ЧТобы при сжатии вторая кнопка переносилась на новую строку*/ 
+    margin: -10px 0;
   }
   .main_block_button {
+    border-radius: 37px;
+    display: flex; 
+    min-height: 48px;
+    letter-spacing: 0.2px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 150%;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 36px;
+    margin: 10px 0;
   }
-  .main_block_border {
+  @media (max-width: 479px){
+    .main_block_button{
+      flex:  1 1 100%; /*Кнопки расширяются при сжатии экрана, делаем их больше*/
+    }
+  }
+._main_block_button_orange{
+  background: #ff7b47;
+  color: white;
+}
+@media (min-width: 479px){
+  .main_block_button:not(:last-child) {
+    margin-right: 10px;
+  } 
+}
+  ._main_block_button_border {
+    color: #0d5c63;
+    border: 1px solid #0d5c63;
   }
   .main_block_img{
     position: absolute;
@@ -161,13 +208,18 @@ body{
     top: 0;
     left: 0;
   }
-
-
+@media (max-width: 1300px){
+  .main_block_img img{
+    object-position: right; /* При сжатии чтобы не пропадали люди*/
+  }
+}
+@media (max-width: 992px){
+  .main_block_img {
+    opacity: 50%; /* При сжатии текст накладывается на картику и плохо читается. Делаем картинку более белой*/
+  }
+}
 
 
 
 
 /* ------------------------------------------------Footer----------------------------------------------------------------------*/
-.footer{
-
-}
