@@ -30,6 +30,7 @@ body{
   color: #252B42;
   font-family: 'Montserrat';
 }
+
 /* Reset standard settings */
 
 /* >---------------------------------------------------------------------------------------------------------------------- */
@@ -46,6 +47,20 @@ body{
   padding: 0px 15px; /* Делаем отступы, чтобы при адаптиве блоки не прилипали к краям, а имели отступ иначе некрасиво*/
   box-sizing: content-box; /* Это чтобы к размеру блока не прибавлялся паддинг, а размер учитывался вместе с ним*/
 }
+
+._ibg{
+  position: relative;
+}
+
+._ibg img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover; /*Как изображение буддет растягиваться в блоке. Cover- сохранит пропорции и займет все пространство*/
+}
+
 /* --------------------------------------------Header-------------------------------------------------------- */
 .header {
   position: absolute;
@@ -114,16 +129,38 @@ body{
 .page{
   flex: 1 1 auto; /*Задаем сразу, чтобы футер был всегда снизу*/
 }
-.page_main_block {
-}
-.main_block {
-}
-.main_block_title {
-}
-.main_block_text {
-}
-.main_block_buttons {
-}
+  .page_main_block {
+  }
+  /* --------------------------------------------------Main Block-------------------------------------------------------------- */
+  .main_block {
+    position: relative;
+  }
+  .main_block_body {
+    padding: 184px 0px 191px 0px;
+    position:relative;
+    z-index: 2; 
+    max-width: 509px;
+  }
+  .main_block_title {
+    font-size: 58px;
+    line-height: 137%;
+    font-weight: 800;
+  }
+  .main_block_text {
+  }
+  .main_block_buttons {
+  }
+  .main_block_button {
+  }
+  .main_block_border {
+  }
+  .main_block_img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
 
 
 
